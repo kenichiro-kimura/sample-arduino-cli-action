@@ -17,3 +17,6 @@ jobs:
           arduino-cli core search
           arduino-cli core install SeeedJP:nrf52
           arduino-cli board list
+      - name: build blink.ino
+        run: |
+          arduino-cli compile --fqbn SeeedJP:nrf52:wio_bg770a blink
