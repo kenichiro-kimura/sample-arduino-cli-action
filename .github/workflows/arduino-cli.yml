@@ -13,7 +13,7 @@ jobs:
         uses: arduino/setup-arduino-cli@v2
       - name: install board for BG770A
         run: |
-          arduino-cli core config add board_manager.additional_urls 'https://www.seeed.co.jp/package_SeeedJP_index.json'
+          arduino-cli config add board_manager.additional_urls 'https://www.seeed.co.jp/package_SeeedJP_index.json'
           arduino-cli core search
           arduino-cli core install SeeedJP:nrf52
           arduino-cli board list
