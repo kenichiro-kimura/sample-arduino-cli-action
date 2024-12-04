@@ -16,7 +16,7 @@ jobs:
           arduino-cli config add board_manager.additional_urls 'https://www.seeed.co.jp/package_SeeedJP_index.json'
           arduino-cli core search
           arduino-cli core install SeeedJP:nrf52
-          arduino-cli board list
+          pip3 install adafruit-nrfutil
       - name: build blink.ino
         run: |
           arduino-cli compile --fqbn SeeedJP:nrf52:wio_bg770a blink
